@@ -1,7 +1,7 @@
 {
-  "name": "pwa-starter",
+  "name": "bridges-chat-pwa",
   "version": "0.0.1",
-  "description": "A starter kit for building PWAs!",
+  "description": "A chat, secure and private.",
   "main": "index.js",
   "scripts": {
     "dev-server": "vite --open",
