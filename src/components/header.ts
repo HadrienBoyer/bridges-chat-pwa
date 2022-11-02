@@ -15,7 +15,7 @@ export class AppHeader extends LitElement {
         justify-content: space-between;
         align-items: center;
         background: var(--app-color-primary);
-        color: white;
+        color: #487574;
         height: 4em;
         padding-left: 16px;
         padding-top: 12px;

@@ -5,9 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-msedge",
+            "type": "msedge",
             "request": "launch",
-            "name": "Run PWA",
+            "name": "Run BRIDGES PWA",
             "webRoot": "${workspaceFolder}/",
             "runtimeArgs": [
                 "--app=https://localhost:3000"
@@ -23,7 +23,7 @@
             "name": "Launch Microsoft Edge and open the Edge DevTools",
             "request": "launch",
             "type": "vscode-edge-devtools.debug",
-            "url": "" // Provide your project's url to finish configuring
+            "url": "https://localhost:3000" // Provide your project's url to finish configuring
         }
     ]
 }
