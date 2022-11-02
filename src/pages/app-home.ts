@@ -79,8 +79,8 @@ export class AppHome extends LitElement {
     if ((navigator as any).share) {
       (navigator as any).share({
         title: 'Bridges - Secure chat',
-        text: 'Chat repository:',
-        url: 'https://github.com/omiklo/bridges',
+        text: 'Build secure bridges with your friends!',
+        url: 'https://bridges.github.io/',
       });
     }
   }
@@ -128,7 +128,7 @@ export class AppHome extends LitElement {
           <sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
         </div>
 
-        <pwa-install>Install PWA Starter</pwa-install>
+        <pwa-install>Install Bridges</pwa-install>
       </main>
     `;
   }
