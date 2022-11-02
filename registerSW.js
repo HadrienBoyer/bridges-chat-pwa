@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/bridges-chat-pwa/sw.js', { scope: '/bridges-chat-pwa/' })})}
