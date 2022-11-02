@@ -80,7 +80,7 @@ export class AppHome extends LitElement {
       (navigator as any).share({
         title: 'Bridges - Secure chat',
         text: 'Build secure bridges with your friends!',
-        url: 'https://bridges.github.io/',
+        url: 'https://hadrienboyer.github.io/bridges-chat-pwa',
       });
     }
   }
