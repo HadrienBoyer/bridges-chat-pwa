@@ -14,7 +14,7 @@ export class AppHome extends LitElement {
 
   // For more information on using properties and state in lit
   // check out this link https://lit.dev/docs/components/properties/
-  @property() message = 'Welcome!';
+  @property() message = 'Welcome, anonymous!';
 
   static get styles() {
     return [
@@ -78,9 +78,9 @@ export class AppHome extends LitElement {
   share() {
     if ((navigator as any).share) {
       (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
-        text: 'Check out the PWABuilder pwa-starter!',
-        url: 'https://github.com/pwa-builder/pwa-starter',
+        title: 'Bridges - Secure chat',
+        text: 'Chat repository:',
+        url: 'https://github.com/omiklo/bridges',
       });
     }
   }
@@ -94,22 +94,8 @@ export class AppHome extends LitElement {
           <sl-card id="welcomeCard">
             <div slot="header">
               <h2>${this.message}</h2>
+              Lorem ipsum dolor sit amet, consectetur adipis. First commit.
             </div>
-
-            <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <a href="https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started">
-                Documentation on Github</a>.
-            </p>
-
-            <p id="mainInfo">
-              Welcome to the
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              pwa-starter! Be sure to head back to
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
-            </p>
 
             ${'share' in navigator
               ? html`<sl-button slot="footer" variant="primary" @click="${this.share}">Share this Starter!</sl-button>`
