@@ -10,11 +10,19 @@
     "deploy": " npx @azure/static-web-apps-cli login --no-use-keychain && npx @azure/static-web-apps-cli deploy",
     "build": "tsc && vite build",
     "start": "npm run dev",
-    "start-remote": "vite --host"
+    "start-remote": "vite --host",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@capacitor/app": "4.1.0",
+    "@capacitor/cli": "4.4.0",
+    "@capacitor/core": "4.4.0",
+    "@capacitor/haptics": "4.0.1",
+    "@capacitor/keyboard": "4.0.1",
+    "@capacitor/status-bar": "4.0.1",
     "@pwabuilder/pwainstall": "^1.6.7",
     "@shoelace-style/shoelace": "^2.0.0-beta.82",
     "@vaadin/router": "^1.7.4",

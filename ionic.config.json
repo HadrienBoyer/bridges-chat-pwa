@@ -1,0 +1,7 @@
+{
+  "name": "bridges-chat-pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

@@ -72,7 +72,12 @@ export class AppHome extends LitElement {
   async firstUpdated() {
     // this method is a lifecycle even in lit
     // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
-    console.log('This is your home page');
+    console.log('This is my home page, ouhouhhh!');
+    console.table([
+      ["X connected", "Channels: X" ],
+      ["Pseudo: X", "Phrase: XXXXXXX" ],
+      ["Debug:", "true" ],
+    ])
   }
 
   share() {
@@ -105,7 +110,7 @@ export class AppHome extends LitElement {
           <sl-card id="infoCard">
             <h2>Technology Used</h2>
 
-            <p>List of used technologies for this project:</p>
+            <p>List of used technologies for this project, ti tell:</p>
 
             <ul>
               <li>
