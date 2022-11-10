@@ -11,27 +11,33 @@
   "background_color": "#343434",
   "related_applications": [],
   "prefer_related_applications": false,
-  "display_override": ["window-controls-overlay"],
+  "display_override": [
+    "window-controls-overlay"
+  ],
   "icons": [
     {
-      "src": "assets/icons/icon_512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon_192.png",
+      "src": "dist/assets/icons/manifest-icon-192.maskable.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "assets/icons/icon_48.png",
-      "sizes": "48x48",
-      "type": "image/png"
+      "src": "dist/assets/icons/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "assets/icons/icon_24.png",
-      "sizes": "24x24",
-      "type": "image/png"
+      "src": "dist/assets/icons/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "dist/assets/icons/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
@@ -55,7 +61,12 @@
       "short_name": "About",
       "description": "Open the about page",
       "url": "/about",
-      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "assets/icons/icon_192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
