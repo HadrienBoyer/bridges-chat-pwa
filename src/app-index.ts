@@ -2,6 +2,7 @@ import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { Router } from '@vaadin/router';
 
+import './components/app-server-start';
 import './pages/app-home';
 import './components/header';
 import './styles/global.css';
