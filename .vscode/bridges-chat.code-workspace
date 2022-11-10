@@ -4,5 +4,80 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"launch": {
+		"configurations": [
+			{
+				"type": "msedge",
+				"request": "launch",
+				"name": "Run BRIDGES PWA",
+				"webRoot": "${workspaceFolder}/",
+				"runtimeArgs": [
+					"--app=https://localhost:3000"
+				],
+				"sourceMapPathOverrides": {
+					"../../src": "${workspaceFolder}/src",
+					"../../src/*": "${workspaceFolder}/src/*"
+				},
+				"preLaunchTask": "npm run dev-task",
+				"postDebugTask": "postdebugKill"
+			},
+			{
+				"name": "Launch Microsoft Edge and open the Edge DevTools",
+				"request": "launch",
+				"type": "vscode-edge-devtools.debug",
+				"url": "https://localhost:3000"
+			},
+			{
+				"type": "msedge",
+				"name": "Launch Microsoft Edge",
+				"request": "launch",
+				"runtimeArgs": [
+					"--remote-debugging-port=9222"
+				],
+				"url": "/Users/hadrien/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
+				"presentation": {
+					"hidden": true
+				}
+			},
+			{
+				"type": "msedge",
+				"name": "Launch Microsoft Edge in headless mode",
+				"request": "launch",
+				"runtimeArgs": [
+					"--headless",
+					"--remote-debugging-port=9222"
+				],
+				"url": "/Users/hadrien/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
+				"presentation": {
+					"hidden": true
+				}
+			},
+			{
+				"type": "vscode-edge-devtools.debug",
+				"name": "Open Edge DevTools",
+				"request": "attach",
+				"url": "/Users/hadrien/.vscode/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.1/out/startpage/index.html",
+				"presentation": {
+					"hidden": true
+				}
+			}
+		],
+		"compounds": [
+			{
+				"name": "Launch Edge Headless and attach DevTools",
+				"configurations": [
+					"Launch Microsoft Edge in headless mode",
+					"Open Edge DevTools"
+				]
+			},
+			{
+				"name": "Launch Edge and attach DevTools",
+				"configurations": [
+					"Launch Microsoft Edge",
+					"Open Edge DevTools"
+				]
+			}
+		]
+	}
 }
