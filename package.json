@@ -1,6 +1,6 @@
 {
   "name": "bridges-chat-pwa",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A chat, secure and private.",
   "main": "index.js",
   "scripts": {
