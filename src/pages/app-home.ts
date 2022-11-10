@@ -94,7 +94,7 @@ export class AppHome extends LitElement {
           <sl-card id="welcomeCard">
             <div slot="header">
               <h2>${this.message}</h2>
-              Lorem ipsum dolor sit amet, consectetur adipis. First commit.
+              Lorem ipsum dolor sit amet, consectetur. First commit.
             </div>
 
             ${'share' in navigator
@@ -104,6 +104,8 @@ export class AppHome extends LitElement {
 
           <sl-card id="infoCard">
             <h2>Technology Used</h2>
+
+            <p>List of used technologies for this project:</p>
 
             <ul>
               <li>

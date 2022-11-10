@@ -1,5 +1,10 @@
 {
   "extends": [
     "development"
-  ]
+  ],
+  "hints": {
+    "apple-touch-icons": "on",
+    "compat-api/html": "on",
+    "meta-viewport": "on"
+  }
 }
