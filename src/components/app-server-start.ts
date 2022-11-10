@@ -11,16 +11,16 @@ const io = require('socket.io')(http)
 app.use(express.static('public'))
 
 /** Manage behavior of each client socket connection */
-io.on('connection', (socket) => {
+io.on('connection', (socket: any) => {
   console.log(`User Connected - Socket ID ${socket.id}`)
 
   // Store the room that the socket is connected to
   // If you need to scale the app horizontally, you'll need to store this variable in a persistent store such as Redis.
   // For more info, see here: https://github.com/socketio/socket.io-redis
-  let currentRoom = null
+  let currentRoom: string | null = null
 
   /** Process a room join request. */
-  socket.on('JOIN', (roomName) => {
+  socket.on('JOIN', (roomName: string) => {
     // Get chatroom info
     let room = io.sockets.adapter.rooms[roomName]
 
@@ -51,13 +51,13 @@ io.on('connection', (socket) => {
   })
 
   /** Broadcast a received message to the room */
-  socket.on('MESSAGE', (msg) => {
+  socket.on('MESSAGE', (msg: { text: any }) => {
     console.log(`New Message - ${msg.text}`)
     socket.broadcast.to(currentRoom).emit('MESSAGE', msg)
   })
 
   /** Broadcast a new publickey to the room */
-  socket.on('PUBLIC_KEY', (key) => {
+  socket.on('PUBLIC_KEY', (key: any) => {
     socket.broadcast.to(currentRoom).emit('PUBLIC_KEY', key)
   })
 
